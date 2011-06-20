@@ -13,7 +13,7 @@ PID_PATH = osp.join(TMP_PATH, 'bot.pid')
 USERNAME = 'be01@underworld'
 PASSWORD   = 'be01'
 SERVER = 'underworld'
-
+PORT = 5222
 
 WHITE_LIST_USERS = (
     'be01@underworld',

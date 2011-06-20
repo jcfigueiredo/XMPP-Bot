@@ -6,7 +6,7 @@ origin:
 http://xmpppy.sourceforge.net/examples/bot.py
 '''
 
-from init_env import USERNAME, PASSWORD, SERVER
+from init_env import USERNAME, PASSWORD, SERVER, PORT
 from init_env import WHITE_LIST_USERS
 
 import pdb
@@ -111,7 +111,7 @@ def main():
     # conn = xmpp.Client(server)#, debug = [])
     conn = xmpp.Client('gmail.com', debug = [])
     # conres = conn.connect()
-    conres = conn.connect(server=(SERVER, 5223))    
+    conres = conn.connect(server=(SERVER, PORT))
     if not conres:
         print "Unable to connect to server %s!" % SERVER
         sys.exit(1)

@@ -8,7 +8,7 @@ Requirement
     xmpppy/python-xmpp - Python library for communication with XMPP (Jabber) servers
 '''
 
-from init_env import USERNAME, PASSWORD, SERVER
+from init_env import USERNAME, PASSWORD, SERVER, PORT
 import xmpp
 import sys
 
@@ -21,10 +21,9 @@ def main():
         sys.exit(0)
 
     client = 'underworld'
-    port = 5222
     cnx = xmpp.Client(client or 'gmail.com', debug=[])
     # cnx = xmpp.Client('gmail.com')
-    conres = cnx.connect(server=(SERVER, port or 5223))
+    conres = cnx.connect(server=(SERVER, PORT))
     # print 'conres:', conres
     # cnx.auth(USERNAME, PASSWORD, 'python')
     cnx.auth(USERNAME, PASSWORD)        
