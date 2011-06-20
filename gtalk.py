@@ -14,21 +14,17 @@ import sys
 
 HELP = 'Usage: gtalk.py foo@gmail.com "Message"'
 
-# USERNAME = 'bot@gmail.com'
-# PASSWORD   = 'secret'
-# SERVER = 'talk.google.com'
-
-# if USERNAME.find('@') != -1:
-#     USERNAME = USERNAME[:USERNAME.find('@')]
 
 def main():
     if len(sys.argv) < 3:
         print HELP
         sys.exit(0)
-        
-    cnx = xmpp.Client('gmail.com', debug=[])
+
+    client = 'underworld'
+    port = 5222
+    cnx = xmpp.Client(client or 'gmail.com', debug=[])
     # cnx = xmpp.Client('gmail.com')
-    conres = cnx.connect(server=(SERVER, 5223))
+    conres = cnx.connect(server=(SERVER, port or 5223))
     # print 'conres:', conres
     # cnx.auth(USERNAME, PASSWORD, 'python')
     cnx.auth(USERNAME, PASSWORD)        

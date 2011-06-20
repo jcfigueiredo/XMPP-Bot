@@ -25,8 +25,8 @@ from client import PlugIn
 import hashlib,base64,random,dispatcher,re
 
 # import md5
-def HH(some): return md5.new(some).hexdigest()
-def H(some): return md5.new(some).digest()
+def HH(some): return hashlib.md5(some).hexdigest()
+def H(some): return hashlib.md5(some).digest()
 def C(some): return ':'.join(some)
 
 class NonSASL(PlugIn):
