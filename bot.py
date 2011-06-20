@@ -109,7 +109,7 @@ def main():
     # user, server, password = jid.getNode(), jid.getDomain(), PASSWORD
 
     # conn = xmpp.Client(server)#, debug = [])
-    conn = xmpp.Client('gmail.com', debug = [])
+    conn = xmpp.Client(SERVER, debug = [])
     # conres = conn.connect()
     conres = conn.connect(server=(SERVER, PORT))
     if not conres:

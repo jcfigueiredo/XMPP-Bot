@@ -21,7 +21,7 @@ def main():
         sys.exit(0)
 
     client = 'underworld'
-    cnx = xmpp.Client(client or 'gmail.com', debug=[])
+    cnx = xmpp.Client(SERVER, debug=[])
     # cnx = xmpp.Client('gmail.com')
     conres = cnx.connect(server=(SERVER, PORT))
     # print 'conres:', conres

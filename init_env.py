@@ -16,6 +16,7 @@ SERVER = 'underworld'
 PORT = 5222
 
 WHITE_LIST_USERS = (
+    'admin@localhost',
     'be01@underworld',
     'be02@underworld',
     'be03@underworld',
